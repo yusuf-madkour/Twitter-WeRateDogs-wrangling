@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is part of the [Udacity data analysis nanodegree](confirm.udacity.com/HESYY4DD).
+This project is part of the [Udacity data analysis nanodegree](https://graduation.udacity.com/confirm/HESYY4DD).
 
 In this project, I am gathering data from multiple sources, assessing the gathered data for quality and tidiness issues, cleaning the data and extracting insights.
 
