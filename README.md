@@ -6,6 +6,11 @@ This project is part of the [Udacity data analysis nanodegree](https://graduatio
 
 In this project, I am gathering data from multiple sources, assessing the gathered data for quality and tidiness issues, cleaning the data and extracting insights.
 
+[Notebook](https://yusuf-madkour.github.io/Twitter-WeRateDogs-wrangling/Wrangling.html)
+[Presentation](https://yusuf-madkour.github.io/Twitter-WeRateDogs-wrangling/Wrangling_Presentation.slides.html)
+[Wrangling Report](https://yusuf-madkour.github.io/Twitter-WeRateDogs-wrangling/wrangle_report.pdf)
+[Insights' Report](https://yusuf-madkour.github.io/Twitter-WeRateDogs-wrangling/insights_report.pdf)
+
 ## Requirements
 
 Language: Python 3.7 or above
@@ -32,5 +37,3 @@ Run the command below from terminal after navigating to the project directory.
 jupyter notebook
 ```
 A new tab will open in your browser, click on the Wrangling.ipynb notebook to open it.
-
-[Github page where you can view the notebook without having to run it](https://yusuf-madkour.github.io/Twitter-WeRateDogs-wrangling/)
