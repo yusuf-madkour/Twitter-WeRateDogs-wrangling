@@ -6,8 +6,6 @@ This project is part of the [Udacity data analysis nanodegree](https://graduatio
 
 In this project, I am gathering data from multiple sources, assessing the gathered data for quality and tidiness issues, cleaning the data and extracting insights.
 
-![]()
-
 ## Requirements
 
 Language: Python 3.7 or above
