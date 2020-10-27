@@ -33,3 +33,4 @@ jupyter notebook
 ```
 A new tab will open in your browser, click on the Wrangling.ipynb notebook to open it.
 
+[Github page where you can view the product conveniently](https://yusuf-madkour.github.io/Twitter-WeRateDogs-wrangling/)
