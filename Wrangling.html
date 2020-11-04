@@ -16272,17 +16272,14 @@ memory usage: 516.9+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quality-Issues">Quality Issues<a class="anchor-link" href="#Quality-Issues">&#182;</a></h3><ol>
-<li>Missing values in:<ul>
-<li><code>in_reply_to_status_id</code></li>
-<li><code>in_reply_to_user_id</code></li>
-<li><code>retweeted_status_id</code></li>
-<li><code>retweeted_status_user_id</code></li>
-<li><code>retweeted_status_timestamp</code></li>
-<li><code>expanded_urls</code></li>
-</ul>
-</li>
-</ol>
+<h3 id="Quality-Issues">Quality Issues<a class="anchor-link" href="#Quality-Issues">&#182;</a></h3><p>Missing values in:</p>
+
+<pre><code>- in_reply_to_status_id
+- in_reply_to_user_id
+- retweeted_status_id
+- retweeted_status_user_id
+- retweeted_status_timestamp
+- expanded_urls</code></pre>
 
 </div>
 </div>
@@ -16400,9 +16397,8 @@ memory usage: 180.0+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Inconsistent rating system</li>
-</ol>
+<p><strong>Issue</strong></p>
+<p>Inconsistent rating system</p>
 <p><strong>Solution</strong></p>
 <p>Divide the values in <code>rating_numerator</code> by the values in <code>rating_denominator</code> and save the result to a column named <code>rating</code> and then drop the <code>rating_denominator</code> and <code>rating_numerator</code> columns.</p>
 
@@ -16562,9 +16558,8 @@ memory usage: 180.0+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Erroneous data type for the <code>timestamp</code> column</li>
-</ol>
+<p><strong>Issue</strong></p>
+<p>Erroneous data type for the <code>timestamp</code> column</p>
 <p><strong>Solution</strong></p>
 <p>Change data type of <code>timestamp</code> column using pandas' to_datetime function</p>
 
@@ -16633,9 +16628,8 @@ Name: timestamp, dtype: datetime64[ns, UTC]</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>"None" is used to refer to missing information in <code>name</code>, <code>doggo</code>, <code>pupper</code>, <code>puppo</code> and <code>floofer</code> columns</li>
-</ol>
+<p><strong>Issue</strong></p>
+<p>"None" is used to refer to missing information in <code>name</code>, <code>doggo</code>, <code>pupper</code>, <code>puppo</code> and <code>floofer</code> columns</p>
 <p><strong>Solution</strong></p>
 <p>Replace all occurrences of "None" in these columns to NaN</p>
 
@@ -16708,9 +16702,8 @@ Name: doggo, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Inaccurately parsed dog names in <code>name</code> such as "a", "an", "my" and "by"</li>
-</ol>
+<p><strong>Issue</strong></p>
+<p>Inaccurately parsed dog names in <code>name</code> such as "a", "an", "my" and "by"</p>
 <p><strong>Solution</strong></p>
 <p>Replace all occurrences of invalid dog names with NaN while making sure only entire occurrences are replaced, actual dog names containing the letter "a" for instance should not be replaced.</p>
 
@@ -16825,9 +16818,7 @@ Name: name, Length: 929, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Tidiness-Issues">Tidiness Issues<a class="anchor-link" href="#Tidiness-Issues">&#182;</a></h3><ol>
-<li>Dog age information is distributed over 4 columns (<code>doggo</code>, <code>pupper</code>, <code>floofer</code>, <code>puppo</code>), this violates the first tidy data requirement "Each variable forms a column".</li>
-</ol>
+<h3 id="Tidiness-Issues">Tidiness Issues<a class="anchor-link" href="#Tidiness-Issues">&#182;</a></h3><p>Dog age information is distributed over 4 columns (<code>doggo</code>, <code>pupper</code>, <code>floofer</code>, <code>puppo</code>), this violates the first tidy data requirement "Each variable forms a column".</p>
 <p><strong>Solution</strong></p>
 <p>Create a new categorical column <code>age</code> that holds information about the dog's age and drop the four aforementioned columns.</p>
 
@@ -17122,9 +17113,7 @@ Name: age, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quality-Issues">Quality Issues<a class="anchor-link" href="#Quality-Issues">&#182;</a></h3><ol>
-<li>Records of images that <del>do not have a dog in them</del> the image prediction algorithm could not identify a dog in them i.e. records that have <code>p1_dog</code> = <code>p2_dog</code> = <code>p3_dog</code> = <code>False</code></li>
-</ol>
+<h3 id="Quality-Issues">Quality Issues<a class="anchor-link" href="#Quality-Issues">&#182;</a></h3><p>Records of images that <del>do not have a dog in them</del> the image prediction algorithm could not identify a dog in them i.e. records that have <code>p1_dog</code> = <code>p2_dog</code> = <code>p3_dog</code> = <code>False</code></p>
 
 </div>
 </div>
@@ -17464,9 +17453,7 @@ Name: age, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Tidiness-Issues">Tidiness Issues<a class="anchor-link" href="#Tidiness-Issues">&#182;</a></h3><ol>
-<li>We have 6 columns (<code>p1</code>, <code>p1_conf</code>, <code>p1_dog</code>, ...etc.) that provide one piece of information which is the dog breed. They should all be reduced to one column so we do not violate the first tidy data requirement "each variable forms a column".</li>
-</ol>
+<h3 id="Tidiness-Issues">Tidiness Issues<a class="anchor-link" href="#Tidiness-Issues">&#182;</a></h3><p>We have 6 columns (<code>p1</code>, <code>p1_conf</code>, <code>p1_dog</code>, ...etc.) that provide one piece of information which is the dog breed. They should all be reduced to one column so we do not violate the first tidy data requirement "each variable forms a column".</p>
 
 </div>
 </div>
@@ -17673,28 +17660,25 @@ Name: dog_breed, Length: 113, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quality-Issues">Quality Issues<a class="anchor-link" href="#Quality-Issues">&#182;</a></h3><ol>
-<li>Missing values in:<ul>
-<li><code>in_reply_to_status_id</code>, <code>in_reply_to_status_id_str</code></li>
-<li><code>in_reply_to_user_id</code>, <code>in_reply_to_user_id_str</code></li>
-<li><code>extended_entities</code></li>
-<li><code>retweeted_status</code></li>
-<li><code>in_reply_to_screen_name</code></li>
-<li><code>in_reply_to_user_id_str</code></li>
-<li><code>quoted_status_id</code>, <code>quoted_status_id_str</code></li>
-<li><code>quoted_status_permalink</code></li>
-<li><code>quoted_status</code></li>
-<li><code>possibly_sensitive</code>, <code>possibly_sensitive_appealable</code></li>
-<li><code>geo</code></li>
-<li><code>coordinates</code></li>
-<li><code>contributors</code></li>
-<li><code>place</code></li>
-</ul>
-</li>
-</ol>
-<ol>
-<li>The table is cluttered with irrelevant information, <code>id</code> and <code>id_str</code> being exact copies of each other for instance. <code>id</code>, <code>retweet_count</code> and <code>favorite_count</code> columns are the only relevant columns in this table.</li>
-</ol>
+<h3 id="Quality-Issues">Quality Issues<a class="anchor-link" href="#Quality-Issues">&#182;</a></h3><p>Missing values in:</p>
+
+<pre><code>- in_reply_to_status_id, in_reply_to_status_id_str
+- in_reply_to_user_id, in_reply_to_user_id_str
+- extended_entities
+- retweeted_status
+- in_reply_to_screen_name
+- in_reply_to_user_id_str
+- quoted_status_id, quoted_status_id_str
+- quoted_status_permalink
+- quoted_status
+- possibly_sensitive, possibly_sensitive_appealable
+- geo
+- coordinates
+- contributors
+- place
+
+</code></pre>
+<p>The table is cluttered with irrelevant information, <code>id</code> and <code>id_str</code> being exact copies of each other for instance. <code>id</code>, <code>retweet_count</code> and <code>favorite_count</code> columns are the only relevant columns in this table.</p>
 
 </div>
 </div>
@@ -17774,9 +17758,8 @@ memory usage: 54.5 KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Inconsistent number of records among the three tables</li>
-</ol>
+<p><strong>Issue</strong></p>
+<p>Inconsistent number of records among the three tables</p>
 <p><strong>Solution</strong></p>
 <ol>
 <li>Rename <code>id</code> column in <code>current_tweet_clean</code> to <code>tweet_id</code> so that it matches other tables</li>
@@ -17967,9 +17950,7 @@ memory usage: 38.8 KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="General-Tidiness-Issue">General Tidiness Issue<a class="anchor-link" href="#General-Tidiness-Issue">&#182;</a></h3><ol>
-<li>Having tweets' data scattered over the two tables <code>archive_tweet_clean</code> and <code>current_tweet_clean</code> violates the third tidy data requirement "Each observational unit forms a table"</li>
-</ol>
+<h3 id="General-Tidiness-Issue">General Tidiness Issue<a class="anchor-link" href="#General-Tidiness-Issue">&#182;</a></h3><p>Having tweets' data scattered over the two tables <code>archive_tweet_clean</code> and <code>current_tweet_clean</code> violates the third tidy data requirement "Each observational unit forms a table"</p>
 
 </div>
 </div>
